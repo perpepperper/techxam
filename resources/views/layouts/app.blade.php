@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
     
 </head>
 <body>
@@ -82,7 +82,7 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     @yield('js')
     @stack('scripts')
 </body>
