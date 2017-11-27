@@ -16,12 +16,13 @@ class TaskController extends Controller
     public function index(Request $request)
     {
         $tasks = $request->user()->tasks()->orderBy('created_at', 'desc')->get();
-        
+        $lists = Lists::all();
 
 
         return view('task', [
             'tasks' => $tasks,
-        ]);
+        ])
+        ->with('lists', $lists);
         
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Lists;
 
 class ListController extends Controller
 {
@@ -34,7 +35,16 @@ class ListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+        'name' => 'required|max:255',
+        ]);
+
+        $list = new Lists;
+        $list->name = $request->name;
+        $list->task_id = $request->id;
+        $list->save();
+
+        return redirect('/task');
     }
 
     /**

@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
     
 </head>
 <body>
@@ -77,6 +78,13 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @yield('js')
+    @stack('scripts')
 </body>
 </html>
 
@@ -110,6 +118,35 @@
         text-align: center;
         color: #f4f4f4 !important;
         font-size: 20px;
-        background-color: #6EA4CA !important;
+        background-color: #D5A253 !important;
+    }
+
+    .button-login {
+        color: #ffffff;
+        background-color: #B85750;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0px 0px 2px 0px #6c332f;
+        min-width: 150px;
+        font-weight: bold;
+        font-size: 12pt;
+        outline: none;
+
+        transition: 0.1s ease-in-out;
+    }
+
+    .button-login:hover {
+        background-color: #9a4943;
+        outline: none;
+
+        transition: 0.1s ease-in-out;
+    }
+
+    .button-login:active {
+        color: #f5f5f5;
+        background-color: #6c332f;
+        box-shadow: 0px 0px 2px 0px #6c332f;
+
+        transition: 0.1s ease-in-out;
     }
 </style>
