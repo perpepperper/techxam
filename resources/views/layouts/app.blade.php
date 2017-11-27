@@ -82,7 +82,7 @@
 
 <style type="text/css">
     .nav-container {
-        background-color: #6EA4CA;
+        background-color: #D5A253;
     }
 
     .navbar-brand {
@@ -95,11 +95,11 @@
     }
 
     .dropdown-toggle:focus {
-        background-color: #D1E0EB !important;
+        background-color: #936A4A !important;
     }
 
     .dropdown-menu a:hover {
-        background-color: #D1E0EB !important;
+        background-color: #936A4A !important;
     }
 
     body {
