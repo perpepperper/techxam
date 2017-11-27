@@ -36,7 +36,7 @@
 
 <style type="text/css">
     body{
-        background: #f4f4f4;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg.jpg');
     }
 
     .head-text h1 {
