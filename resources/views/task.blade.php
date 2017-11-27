@@ -36,12 +36,11 @@
 
         @if (count($tasks) > 0)
         @foreach ($tasks as $task)
-
-        <div class="col-md-4">
-            <div class="panel panel-default center-block" style="width: 80%">
+            <div class="panel panel-default center-block panel-contain" style="width: 40%;">
                 <div class="panel-heading">
                     <tr>
-                       
+                        <td>{{ $task->name }}</td>
+
 
                         <td>
                             <form action="{{ url('task/'.$task->id) }}" method="POST">
@@ -53,34 +52,33 @@
                                 </button>
                             </form>
                         </td>
-                         <td>{{ $task->name }}</td>
-
                     </tr>
 
                 </div>
 
 
 
-                <div class="panel-body">
+                <div>
+                    <div class="panel-body">
 
-                    <table class="table table-hover task-table" title="{{ $task->name }}">
+                        <table class="table table-hover task-table" title="{{ $task->name }}">
 
-                        <tbody>
-                            @foreach($task->list as $subtask)
-                            <tr>
+                            <tbody>
+                                @foreach($task->list as $subtask)
+                                <tr>
 
-                                <td><input type="checkbox" name="">{{$subtask->name}}</td>
-                            </tr>
-                            @endforeach
-                        </tbody>
+                                    <td><input type="checkbox" name="">{{$subtask->name}}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
 
 
-                    </table>
-                    <button style="float: right" class="btn btn-default add" data-toggle="modal" value="{{ $task->id }}"> Add Task
-                    </button>
+                        </table>
+                        <button style="float: right" class="btn btn-default add" data-toggle="modal" value="{{ $task->id }}"> Add Task
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
         @endforeach
     @endif
 
