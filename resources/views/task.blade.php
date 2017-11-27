@@ -41,8 +41,7 @@
             <div class="panel panel-default center-block" style="width: 80%">
                 <div class="panel-heading">
                     <tr>
-                        <td>{{ $task->name }}</td>
-
+                       
 
                         <td>
                             <form action="{{ url('task/'.$task->id) }}" method="POST">
@@ -54,6 +53,8 @@
                                 </button>
                             </form>
                         </td>
+                         <td>{{ $task->name }}</td>
+
                     </tr>
 
                 </div>
