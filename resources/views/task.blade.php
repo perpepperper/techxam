@@ -30,7 +30,33 @@
         </form>
     </div>
 
-        
+        <!-- TODO: Current Tasks -->
+        @if (count($tasks) > 0)
+        @foreach ($tasks as $task)
+
+        <div class="panel panel-default center-block" style="width: 30%">
+            <div class="panel-heading">
+                <tr>
+                    <td>{{ $task->name }}</td>
+                    
+
+                    <td>
+                        <form action="{{ url('task/'.$task->id) }}" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+
+                            <button type="submit" id="delete-task-{{ $task->id }}" class="close">
+                                <i class="fa fa-btn fa-trash"></i>X
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+               
+            </div>
+
+            </div>
+        @endforeach
+    @endif  
 
     
 
