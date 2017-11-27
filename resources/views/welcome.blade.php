@@ -20,11 +20,11 @@
                             <a href="{{ url('/tasks') }}"><button>Home</button></a>
                         </div>            
                         @else
-                        <div class="col-md-6 buttons">
+                        <div class="col-md-6 col-md-offset-3 buttons">
                             <a href="{{ route('login') }}"><button>Login</button></a>
                         </div>
-                        <div class="col-md-6 buttons">
-                            <a href="{{ route('register') }}"><button>Register</button></a>
+                        <div class="col-md-6 col-md-offset-3 ">
+                            <a href="{{ route('register') }}">Register</a>
                         </div>
                         @endauth
                     @endif
@@ -52,19 +52,18 @@
     }
 
     .content {
-        background-color: #f5f5f5;
+        /*background-color: #f5f5f5;
         max-height: 100%;
         max-width: 100%;
         border: none;
-        border-radius: 6px;
+        box-shadow: 0px 0px 2px 0px #D5A253;
+        border-radius: 6px;*/
         text-align: center;
         padding: 20px 0px 20px 0px;
 
         /*display: flex;
         justify-content: center;
         align-items: center;*/
-
-        box-shadow: 0px 0px 2px 0px #D5A253;
     }
 
     .buttons button {
