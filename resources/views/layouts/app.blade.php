@@ -8,14 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top nav-container">
             <div class="container">
                 <div class="navbar-header">
 
@@ -28,8 +29,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand nav-text" href="{{ url('/') }}">
+                        Bakit List
                     </a>
                 </div>
 
@@ -43,11 +44,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a class="nav-text" href="{{ route('login') }}">Login</a></li>
+                            <li><a class="nav-text" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <a href="#" class="dropdown-toggle nav-text" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -78,3 +79,37 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
+
+<style type="text/css">
+    .nav-container {
+        background-color: #6EA4CA;
+    }
+
+    .navbar-brand {
+        font-family: Acme-Regular;
+        font-size: 25px;
+    }
+
+    .nav-text {
+        color: #F4F4F4 !important;
+    }
+
+    .dropdown-toggle:focus {
+        background-color: #D1E0EB !important;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #D1E0EB !important;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    .panel-heading {
+        text-align: center;
+        color: #f4f4f4 !important;
+        font-size: 20px;
+        background-color: #6EA4CA !important;
+    }
+</style>
