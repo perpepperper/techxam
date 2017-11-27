@@ -34,32 +34,33 @@
         @if (count($tasks) > 0)
         @foreach ($tasks as $task)
 
-        <div class="panel panel-default center-block" style="width: 30%">
-            <div class="panel-heading">
-                <tr>
-                    <td>{{ $task->name }}</td>
-                    
+        <div class="col-md-4">
+            <div class="panel panel-default center-block" style="width: 80%">
+                <div class="panel-heading">
+                    <tr>
+                        <td>{{ $task->name }}</td>
 
-                    <td>
-                        <form action="{{ url('task/'.$task->id) }}" method="POST">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
 
-                            <button type="submit" id="delete-task-{{ $task->id }}" class="close">
-                                <i class="fa fa-btn fa-trash"></i>X
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-               
-            </div>
+                        <td>
+                            <form action="{{ url('task/'.$task->id) }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
 
-            
+                                <button type="submit" id="delete-task-{{ $task->id }}" class="close">
+                                    <i class="fa fa-btn fa-trash"></i>X
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
 
-            <div class="panel-body">
+                </div>
+
+
+
+                <div class="panel-body">
 
                     <table class="table table-hover task-table" title="{{ $task->name }}">
-                        
+
                         <tbody>
                             @foreach($task->list as $subtask)
                             <tr>
@@ -69,10 +70,11 @@
                             @endforeach
                         </tbody>
 
-                            
+
                     </table>
                     <button style="float: right" class="btn btn-default add" data-toggle="modal" value="{{ $task->id }}"> Add Task
                     </button>
+                </div>
             </div>
         </div>
         @endforeach
@@ -112,8 +114,6 @@
     
   </div>
 </div>
-
-
 
 @endsection
 
