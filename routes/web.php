@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/task', 'TaskController');
 Route::post('/group', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
+
+Route::post('/task', 'ListController@store');
