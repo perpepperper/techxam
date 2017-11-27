@@ -35,19 +35,24 @@
 </html>
 
 <style type="text/css">
+    @font-face{
+        font-family: LT Chickenhawk;
+        src: url('/fonts/LT Chickenhawk.ttf');
+    }
+
     body{
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bg.jpg');
     }
 
     .head-text h1 {
-        font-family: Acme-Regular;
+        font-family: LT Chickenhawk;
         font-size: 100px;
         text-align: center;
-        color: #757575;
+        color: #f5f5f5;
     }
 
     .content {
-        background-color: #ffffff;
+        background-color: #f5f5f5;
         max-height: 100%;
         max-width: 100%;
         border: none;
@@ -59,17 +64,17 @@
         justify-content: center;
         align-items: center;*/
 
-        box-shadow: 0px 0px 2px 0px #6EA4CA;
+        box-shadow: 0px 0px 2px 0px #D5A253;
     }
 
     .buttons button {
         color: #ffffff;
         padding: 10px;
         margin: 20px 0px 20px 0px;
-        background-color: #2579A9;
+        background-color: #B85750;
         border: none;
         border-radius: 6px;
-        box-shadow: 0px 0px 2px 0px #6EA4CA;
+        box-shadow: 0px 0px 2px 0px #6c332f;
         min-width: 150px;
         font-weight: bold;
         font-size: 20pt;
@@ -79,16 +84,16 @@
     }
 
     .buttons button:hover {
-        background-color: #39729B;
+        background-color: #9a4943;
         outline: none;
 
         transition: 0.1s ease-in-out;
     }
 
     .buttons button:active {
-        color: #F4F4F4;
-        background-color: #0C3C60;
-        box-shadow: 0px 0px 2px 0px #6EA4CA;
+        color: #f5f5f5;
+        background-color: #6c332f;
+        box-shadow: 0px 0px 2px 0px #6c332f;
 
         transition: 0.1s ease-in-out;
     }
