@@ -17,7 +17,7 @@
                     @if (Route::has('login'))
                         @auth
                         <div class="col-md-6 col-md-offset-3 buttons">
-                            <a href="{{ url('/tasks') }}"><button>Home</button></a>
+                            <a href="{{ url('/task') }}"><button>Home</button></a>
                         </div>            
                         @else
                         <div class="col-md-6 col-md-offset-3 buttons">
