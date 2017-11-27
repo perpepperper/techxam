@@ -31,10 +31,6 @@
         </form>
     </div>
 
-<<<<<<< HEAD
-        <!-- TODO: Current Tasks -->
-=======
->>>>>>> 7048f5a9213117abc7fc538ece80bf89af2b99c6
         @if (count($tasks) > 0)
         @foreach ($tasks as $task)
 
@@ -58,11 +54,8 @@
                
             </div>
 
-<<<<<<< HEAD
-            </div>
-        @endforeach
-    @endif  
-=======
+            
+
             <div class="panel-body">
 
                     <table class="table table-hover task-table" title="{{ $task->name }}">
@@ -105,7 +98,7 @@
           <input type="text" class="form-control" id="name" name="name" maxlength="100">
         </div>
         <div class="form-group required" id="id">
->>>>>>> 7048f5a9213117abc7fc538ece80bf89af2b99c6
+
 
           <input type="hidden" class="form-control" id="tlist" name="id" maxlength="100">
         </div>
