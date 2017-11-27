@@ -39,7 +39,7 @@
             <div class="panel panel-default center-block panel-contain" style="width: 40%;">
                 <div class="panel-heading">
                     <tr>
-                        <td>{{ $task->name }}</td>
+                        
 
 
                         <td>
@@ -52,6 +52,7 @@
                                 </button>
                             </form>
                         </td>
+                        <td>{{ $task->name }}</td>
                     </tr>
 
                 </div>
