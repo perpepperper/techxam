@@ -78,9 +78,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jquery.bootstrap.wizard.min.js') }}"></script>
 
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 
     @yield('js')
